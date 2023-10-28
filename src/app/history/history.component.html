@@ -1,0 +1,87 @@
+<div class="button-container">
+    <button routerLink="/calls">Call History</button>
+    <button routerLink="/text">Text</button>
+    <button routerLink="/data">Data</button>
+  </div>
+<br>
+<br>
+  <div class="phone-details-container">
+    <div>
+      <label for="phoneNumber">Enter Phone Number:</label>
+      <input type="text" id="phoneNumber" [(ngModel)]="phoneNumber">
+      <button (click)="getPhoneNumberDetails(phoneNumber)">Get Details</button>
+    </div>
+      <h2>Details for Phone Number {{phoneNumber}}</h2>
+      <h2>Call History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Call Duration</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let history of details">
+            <td>{{ history.name }}</td>
+            <td>{{ history.phoneNumber }}</td>
+            <td>{{ history.startTime }}</td>
+            <td>{{ history.endTime }}</td>
+            <td>{{history.callDuration}}</td>
+            <td>{{ history.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>text history</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Time</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let text of text">
+            <td>{{ text.name }}</td>
+            <td>{{ text.phoneNumber }}</td>
+            <td>{{ text.time }}</td>
+            <td>{{ text.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>datahistory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>date</th>
+            <th>dataPerDay</th>
+            <th>consumedData
+            </th>
+            <th>leftData</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of datas">
+            <td>{{ data.name }}</td>
+            <td>{{ data.phoneNumber }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.dataPerDay }}</td>
+            <td>{{ data.consumedData }}</td>
+            <td>{{data.leftData}}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      
+      
+  </div>
+  

@@ -1,0 +1,40 @@
+  <div class="row">
+    <div class="chart-box">
+      <div class="chart-title">{{selectedLocation}} Subscribers by PlanType</div>
+      <canvas id="myChart"></canvas>
+    </div>
+    
+
+  <div class="chart-box">
+  <div class="chart-container">
+    <div class="center-dropdown">
+      <label for="locationSelect">Select Location:</label>
+      <select id="locationSelect" [(ngModel)]="selectedLocation" (change)="onLocationChange()" required>
+        <option value="total">TOTAL</option> 
+        <option value="hyderabad">HYDERABAD</option>
+        <option value="chennai">CHENNAI</option>
+        <option value="mumbai">MUMBAI</option>
+      </select>
+      <br>
+      <br>
+      <br>
+      {{selectedLocation}}
+      <br>
+      <br>
+      <div class="chart-box">
+      <p>Total Subscribers in {{selectedLocation}}: {{totalSubscribers}}</p>
+    </div>
+      <br>
+      <div class="chart-box">
+      <p>Total Revenue in {{selectedLocation}}: {{totalRevenue}}</p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+    <div class="chart-box">
+      <div class="chart-title">{{selectedLocation}} Revenue by PlanType</div>
+      <canvas id="myBar" height="300"></canvas>
+    </div>
+  </div>

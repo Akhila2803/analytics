@@ -1,0 +1,55 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e49e1d;
+    color: #faf7f7;
+    padding: 10px 10px;
+  }
+  
+  /* Logo styles */
+  .logo-image {
+    width: 60px; /* Increase logo image width */
+    height: 60px; /* Increase logo image height */
+  }
+  
+  /* Navigation links styles */
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links ul li {
+    margin-right: 20px;
+  }
+  
+  .nav-links ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: initial;
+    font-size: 18px; /* Increase font size for navigation links */
+  }
+  
+  /* Admin section styles */
+  .admin {
+    display: flex;
+    flex-direction: column; /* Stack the admin image and name vertically */
+    align-items: center;
+  }
+  
+  .admin-image {
+    width: 60px; /* Increase admin image width */
+    height: 60px; /* Increase admin image height */
+  }
+  
+  .admin-name {
+    font-weight: inherit;
+    font-size: 20px; /* Increase font size for admin name */
+  }
+  

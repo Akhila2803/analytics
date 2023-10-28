@@ -1,0 +1,24 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>date</th>
+        <th>dataPerDay</th>
+        <th>consumedData
+        </th>
+        <th>leftData</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of data">
+        <td>{{ data.name }}</td>
+        <td>{{ data.phoneNumber }}</td>
+        <td>{{ data.date }}</td>
+        <td>{{ data.dataPerDay }}</td>
+        <td>{{ data.consumedData }}</td>
+        <td>{{data.leftData}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

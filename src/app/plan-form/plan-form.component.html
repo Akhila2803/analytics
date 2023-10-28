@@ -1,0 +1,41 @@
+<form [formGroup]="planForm" (ngSubmit)="submitForm()" class="centered-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" required>
+    <br>
+    <br>
+    <label for="dataLimit">Data Limit</label>
+    <input type="text" id="dataLimit" formControlName="dataLimit" required>
+    <br>
+    <label for="Validity">Validity</label>
+    <input type="text" id="validity" formControlName="validity" required>
+    <br>
+    
+    <br>
+    <label for="totalData">Total Data</label>
+    <input type="text" id="totalData" formControlName="totalData" required>
+    <br>
+    <br>
+
+    <label for="voiceLimit">Voice Limit</label>
+    <input type="text" id="voiceLimit" formControlName="voiceLimit" required>
+    <br>
+    <br>
+    <label for="smsLimit">SMS Limit</label>
+    <input type="text" id="smsLimit" formControlName="smsLimit" required>
+    <br>
+    <br>
+    <label for="price">Price</label>
+    <input type="number" id="price" formControlName="price" required>
+    <br>
+    <br>
+    <label for="planType">Plan Type</label>
+    <select id="planType" formControlName="planType" required>
+      <option [value]="planTypeEnum.PREPAID">PREPAID</option>
+      <option [value]="planTypeEnum.POSTPAID">POSTPAID</option>
+    </select>
+
+    <br>
+    <br>
+    <button type="submit">Add Plan</button>
+  </form>
+  

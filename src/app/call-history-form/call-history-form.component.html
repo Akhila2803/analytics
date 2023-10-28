@@ -1,0 +1,29 @@
+<form [formGroup]="callHistoryForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" required>
+    </div>
+  
+    <div>
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" id="phoneNumber" formControlName="phoneNumber" required>
+    </div>
+  
+    <div>
+      <label for="startTime">Start Time</label>
+      <input type="time" id="startTime" formControlName="startTime" required>
+    </div>
+  
+    <div>
+      <label for="endTime">End Time</label>
+      <input type="time" id="endTime" formControlName="endTime" required>
+    </div>
+  
+    <div>
+      <label for="date">Date</label>
+      <input type="Date" id="date" formControlName="date" required>
+    </div>
+  
+    <button type="submit">Save</button>
+  </form>
+  

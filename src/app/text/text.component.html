@@ -1,0 +1,19 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Time</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let text of text">
+        <td>{{ text.name }}</td>
+        <td>{{ text.phoneNumber }}</td>
+        <td>{{ text.time }}</td>
+        <td>{{ text.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

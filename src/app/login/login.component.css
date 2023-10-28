@@ -1,0 +1,52 @@
+/* Center the login container vertically and horizontally */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the form input groups */
+  .input-group {
+    margin: 10px 0;
+  }
+  
+  .input-group label {
+    display: block;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #0a0a0a;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Style for the login button */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Style for the error message */
+  .error-message {
+    color: #f80b0b;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .form-label {
+    font-family: Arial, sans-serif; /* Change the font-family as needed */
+    font-size: 16px; /* Change the font size as needed */
+    font-weight: bold; /* Change the font weight as needed */
+    color: #080808; /* Change the font color as needed */
+    /* Add any other styles you want here */
+  }
+  

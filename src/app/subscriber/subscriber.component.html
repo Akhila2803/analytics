@@ -1,0 +1,31 @@
+<div class="subscriber-list">
+    <h2>Subscriber List</h2>
+    <ul>
+      <li *ngFor="let subscriber of subscribers">
+        <div class="subscriber-info">
+          <div><strong>Name:</strong> {{ subscriber.name }}</div>
+          <div><strong>Email:</strong> {{ subscriber.email }}</div>
+          <div><strong>Phone Number:</strong> {{ subscriber.phoneNumber }}</div>
+          <div><strong>Plan Type:</strong> {{ subscriber.planType }}</div>
+          <div><strong>Location:</strong> {{ subscriber.location }}</div>
+          <button (click)="showPlanDetails(subscriber)">Show Plans</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="selectedSubscriber">
+    <h2>Subscriber Plans</h2>
+    <ul>
+      <li>
+        <div><strong>Plan Name:</strong> {{ selectedSubscriber.plan.name }}</div>
+        <div><strong>Data Limit:</strong> {{ selectedSubscriber.plan.dataLimit }} </div>
+        <div><strong>Total Data:</strong> {{ selectedSubscriber.plan.totalData }} </div>
+        <div><strong>Voice Limit:</strong> {{ selectedSubscriber.plan.voiceLimit }} </div>
+        <div><strong>SMS Limit:</strong> {{ selectedSubscriber.plan.smsLimit }}</div>
+        <div><strong>Validity:</strong> {{ selectedSubscriber.plan.validity }}</div>
+        <div><strong>Price:</strong> {{ selectedSubscriber.plan.price }} Rs</div>
+      </li>
+    </ul>
+  </div>
+  

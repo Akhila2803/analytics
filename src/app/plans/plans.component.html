@@ -1,0 +1,38 @@
+
+  
+  <div class="component-container">
+    
+<div class="button-container">
+  <button (click)="getPlans('prepaid')">PREPAID</button>
+  <button (click)="getPlans('postpaid')">POSTPAID</button>
+</div>
+
+<div *ngIf="selectedPlanType">
+  <h2>{{ selectedPlanType }} Plans</h2>
+  <ul>
+    <li *ngFor="let plan of plans">
+      <div class="plan-box">
+        <div class="plan-header">
+          <span class="plan-name">{{ plan.name }}</span>
+          <span class="plan-price">{{ plan.price }} Rs</span>
+          <button (click)="showPlanDetails(plan)">Show Details</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedPlan">
+  <h2>Plan Details</h2>
+  <div>
+    Plan Name: {{ selectedPlan.name }}
+  </div>
+  <div>Data Limit: {{ selectedPlan.dataLimit }}</div>
+  <div>Total Data: {{ selectedPlan.totalData }}</div>
+  <div>Voice: {{ selectedPlan.voiceLimit }}</div>
+  <div>SMS: {{ selectedPlan.smsLimit }}</div>
+  <div>Price: {{ selectedPlan.price }} Rs</div>
+  <div>Validity: {{selectedPlan.validity}}</div>
+</div>
+    
+  </div>

@@ -1,0 +1,22 @@
+   .chart-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .chart-box {
+    border: 2px solid #080808;
+    padding: 10px;
+    margin: 10px;
+    flex: 1;
+    box-sizing: border-box;
+  }
+  
+  .chart-title {
+    margin-bottom: 15px;
+    font-style:oblique;
+    font-size: 16px;
+    color: #63ac1f;
+    font-weight: bold;
+  }
+  

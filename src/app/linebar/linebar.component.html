@@ -1,0 +1,10 @@
+<div *ngIf="combinationChartData">
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="combinationChartData.datasets"
+              [labels]="combinationChartData.labels">
+              
+      </canvas>
+    </div>
+  </div>
+  

@@ -1,0 +1,42 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .component-container {
+    background-image: url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=740&t=st=1698476381~exp=1698476981~hmac=883632657a2505afd3b74507abd53eb3b3149aaa62fef4b070bad7e51f5e77b8');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+  }
+  .plan-box {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .plan-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .plan-name {
+    font-weight: bold;
+  }
+  
+  .plan-price {
+    font-weight: bold;
+  }
+  
+  .plan-details {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .plan-details h2 {
+    margin-top: 10px;
+  }
+  

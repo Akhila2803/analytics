@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Call Duration</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let history of callHistories">
+      <td>{{ history.name }}</td>
+      <td>{{ history.phoneNumber }}</td>
+      <td>{{ history.startTime }}</td>
+      <td>{{ history.endTime }}</td>
+      <td>{{history.callDuration}}</td>
+      <td>{{ history.date }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,7 @@
+.component-container {
+  background-image: url('../assets/background-bluee.jpg');
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  /* Add other background properties as needed */
+}
+
