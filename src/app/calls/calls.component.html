@@ -1,3 +1,8 @@
+<!-- 
+<div class="button-container">
+  <button routerLink="/text">Text</button>
+  <button routerLink="/data">Data</button>
+</div>
 <table>
   <thead>
     <tr>
@@ -19,4 +24,35 @@
       <td>{{ history.date }}</td>
     </tr>
   </tbody>
-</table>
+</table> -->
+<div class="button-container">
+  <button routerLink="/text">Text</button>
+  <button routerLink="/data">Data</button>
+</div>
+<br>
+<br>
+<div class="table-container">
+  <h3 style="text-align: center; color: chartreuse;">Call Records</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Call Duration</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let history of callHistories">
+        <td>{{ history.name }}</td>
+        <td>{{ history.phoneNumber }}</td>
+        <td>{{ history.startTime }}</td>
+        <td>{{ history.endTime }}</td>
+        <td>{{history.callDuration}}</td>
+        <td>{{ history.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,38 +1,68 @@
 
   
-  <div class="component-container">
+  <div class="component-container" [class.blur]="selectedPlan">
+    <div class="button-container">
+      <button (click)="getPlans('prepaid')" [class.active]="selectedPlanType === 'prepaid'">PREPAID</button>
+      <button (click)="getPlans('postpaid')" [class.active]="selectedPlanType === 'postpaid'">POSTPAID</button>
+    </div>
+    <br>
     
-<div class="button-container">
-  <button (click)="getPlans('prepaid')">PREPAID</button>
-  <button (click)="getPlans('postpaid')">POSTPAID</button>
-</div>
-
-<div *ngIf="selectedPlanType">
-  <h2>{{ selectedPlanType }} Plans</h2>
-  <ul>
-    <li *ngFor="let plan of plans">
+<div *ngIf="selectedPlanType" class="plan-list-container">
+  <h2 class="selected-plan-type">{{ selectedPlanType }} Plans</h2>
+  <ul class="plan-list">
+    <li *ngFor="let plan of plans" class="plan-item">
       <div class="plan-box">
         <div class="plan-header">
-          <span class="plan-name">{{ plan.name }}</span>
           <span class="plan-price">{{ plan.price }} Rs</span>
-          <button (click)="showPlanDetails(plan)">Show Details</button>
         </div>
+        <div class="plans-details">
+          <div class="details">
+            <span class="details-label">Validity</span>
+            <span class="details-value">{{ plan.validity }}</span>
+          </div>
+          <div class="details">
+            <span class="details-label">Data</span>
+            <span class="details-value">{{ plan.dataLimit }}</span>
+          </div>
+        </div>
+        <br>
+        <a (click)="showPlanDetails(plan)">Show Details</a>
       </div>
     </li>
   </ul>
 </div>
-
-<div *ngIf="selectedPlan">
-  <h2>Plan Details</h2>
-  <div>
-    Plan Name: {{ selectedPlan.name }}
-  </div>
-  <div>Data Limit: {{ selectedPlan.dataLimit }}</div>
-  <div>Total Data: {{ selectedPlan.totalData }}</div>
-  <div>Voice: {{ selectedPlan.voiceLimit }}</div>
-  <div>SMS: {{ selectedPlan.smsLimit }}</div>
-  <div>Price: {{ selectedPlan.price }} Rs</div>
-  <div>Validity: {{selectedPlan.validity}}</div>
 </div>
+  <div class="modal" *ngIf="selectedPlan">
+    <div class="modal-content">
+      <span class="close" (click)="toggleDetails(selectedPlan)">&times;</span>
+
+      <div class="Plan-price"><p style="color:brown; font-size: 16px; font-style: inherit; font-weight: bold;">{{selectedPlan.price}} Rs</p></div>
+      <br>
+      <h3>Plan Details</h3>
+      <div class="plan-details">
+        <div class="detail">
+          <span class="detail-label">Pack validity:</span>
+          <span class="detail-value">{{ selectedPlan.validity }}</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Total data:</span>
+          <span class="detail-value">{{ selectedPlan.totalData }}</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Data at high speed:</span>
+          <span class="detail-value">{{ selectedPlan.dataLimit }} / day</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Voice:</span>
+          <span class="detail-value">{{ selectedPlan.voiceLimit }}</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">SMS:</span>
+          <span class="detail-value">{{ selectedPlan.smsLimit }} / day</span>
+        </div>
+      </div>
+      
+    </div>
     
   </div>
+  

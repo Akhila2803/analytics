@@ -8,7 +8,7 @@
   <div class="chart-box">
   <div class="chart-container">
     <div class="center-dropdown">
-      <label for="locationSelect">Select Location:</label>
+      <label for="locationSelect">Select Location: </label>
       <select id="locationSelect" [(ngModel)]="selectedLocation" (change)="onLocationChange()" required>
         <option value="total">TOTAL</option> 
         <option value="hyderabad">HYDERABAD</option>
@@ -22,11 +22,12 @@
       <br>
       <br>
       <div class="chart-box">
-      <p>Total Subscribers in {{selectedLocation}}: {{totalSubscribers}}</p>
+      <p style="color: white;">Subscribers in {{selectedLocation}}<p style="color: rgb(10, 248, 216);">{{totalSubscribers}}</p> 
     </div>
       <br>
       <div class="chart-box">
-      <p>Total Revenue in {{selectedLocation}}: {{totalRevenue}}</p>
+        <p style="color: white;">Revenue of {{selectedLocation}}<p style="color: rgb(10, 248, 216);"> {{totalRevenue}}</p> 
+      
       </div>
     </div>
     </div>

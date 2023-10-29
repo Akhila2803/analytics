@@ -29,4 +29,12 @@ export class PlansComponent {
     this.selectedPlan = plan;
   }
 
+  toggleDetails(plan: any) {
+    if (this.selectedPlan === plan) {
+      this.selectedPlan = null; // Close the details if they are already open
+    } else {
+      this.selectedPlan = plan;
+    }
+  }
+
 }

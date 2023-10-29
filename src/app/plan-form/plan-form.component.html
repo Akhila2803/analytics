@@ -1,34 +1,26 @@
 <form [formGroup]="planForm" (ngSubmit)="submitForm()" class="centered-form">
-    <label for="name">Name</label>
+    <label for="name" style="font-size: 16px; font-style:initial">Name</label>
     <input type="text" id="name" formControlName="name" required>
     <br>
-    <br>
-    <label for="dataLimit">Data Limit</label>
+    <label for="dataLimit" style="font-size: 16px; font-style:initial">Data Limit</label>
     <input type="text" id="dataLimit" formControlName="dataLimit" required>
     <br>
-    <label for="Validity">Validity</label>
+    <label for="Validity" style="font-size: 16px; font-style:initial">Validity</label>
     <input type="text" id="validity" formControlName="validity" required>
     <br>
-    
-    <br>
-    <label for="totalData">Total Data</label>
+    <label for="totalData" style="font-size: 16px; font-style:initial">Total Data</label>
     <input type="text" id="totalData" formControlName="totalData" required>
     <br>
-    <br>
-
-    <label for="voiceLimit">Voice Limit</label>
+    <label for="voiceLimit" style="font-size: 16px; font-style:initial">Voice Limit</label>
     <input type="text" id="voiceLimit" formControlName="voiceLimit" required>
     <br>
-    <br>
-    <label for="smsLimit">SMS Limit</label>
+    <label for="smsLimit" style="font-size: 16px; font-style:initial">SMS Limit</label>
     <input type="text" id="smsLimit" formControlName="smsLimit" required>
     <br>
-    <br>
-    <label for="price">Price</label>
+    <label for="price" style="font-size: 16px; font-style:initial">Price</label>
     <input type="number" id="price" formControlName="price" required>
     <br>
-    <br>
-    <label for="planType">Plan Type</label>
+    <label for="planType" style="font-size: 16px; font-style:initial">Plan Type</label>
     <select id="planType" formControlName="planType" required>
       <option [value]="planTypeEnum.PREPAID">PREPAID</option>
       <option [value]="planTypeEnum.POSTPAID">POSTPAID</option>

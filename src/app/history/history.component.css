@@ -1,57 +1,111 @@
-/* 
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; 
-  } */
-  .button-container {
-    display: flex; /* Use Flexbox */
-    justify-content: space-between; /* Distribute buttons evenly along the container */
-    align-items: center; /* Align buttons vertically in the center */
-  }
- 
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.button-container button {
+  background-color: #007BFF;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
   
+}
 
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
+table, th, td {
+  border: 2px solid #0c0c0c;
+}
 
-  button:hover {
-    background-color: #0056b3;
-  }
+th{
+  padding: 10px;
+  text-align: left;
+  color:rgb(42, 132, 192);
+  font-weight: lighter;
+}
+td {
+  padding: 10px;
+  text-align: left;
+  color: white;
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+}
 
-  table, th, td {
-    border: 1px solid black;
-  }
+h2 {
+  margin-top: 10px;
+  color:yellow;
+  font-family: 'Times New Roman', Times, serif;
+}
+.centered-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px; 
+  border: 1px solid #0f0f0f; 
+  max-width: 300px; 
+  margin: 0 auto; 
+  border-radius: 5px;
+}
 
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
+.custom-input {
+  width: 200px; 
+  padding: 10px; 
+  border: 1px solid #0c0c0c; 
+  border-radius: 10px; 
+  margin: 5px; 
+  background-color: transparent;
+  color:gold;
+}
 
-  th {
-    background-color: #f2f2f2;
-  }
+.centered-elements label,
+.centered-elements button {
+  margin: 5px;
+}
+.custom-button {
+  background-color: #fa795c; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px;
+  cursor: pointer; 
+}
 
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
+.custom-button:hover {
+  background-color: #f54c04;
+} 
+.history table {
+  width: 100%;
+  margin: 0 auto; /* Center the table horizontally */
+  margin-top: 20px; /* Add margin at the top of the table */
+  margin-bottom: 20px; /* Add margin at the bottom of the table */
+  padding: 10px; /* Add padding inside the table */
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
 
-  tr:nth-child(odd) {
-    background-color: #fff;
-  }
-
-
+/* Add styles for table headings */
+.history table th {
+  padding: 10px;
+  text-align: left;
+ 
+}
+.history {
+  margin: 0 20px; /* Adjust the value to control the amount of space */
+}
+/* Add styles for table cells */
+.history table td {
+  padding: 10px;
+  text-align: left;
+}
